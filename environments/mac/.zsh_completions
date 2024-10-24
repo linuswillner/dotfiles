@@ -1,0 +1,16 @@
+# Mise
+eval "$(mise completion zsh)"
+
+# Homebrew zsh completions
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  autoload -Uz compinit
+  compinit
+fi
+
+# Heroku
+HEROKU_AC_ZSH_SETUP_PATH=/Users/linusw/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+# 1Password
+eval "$(op completion zsh)"; compdef _op op
