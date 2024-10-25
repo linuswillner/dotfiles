@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Homebrew wrapper that keeps installed packages in the repository's SBOM
+
+set -euo pipefail
+
+SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/homebrew"
+
+if [[ ${1:-} == "install" || ${1:-} == "uninstall" ]]; then
+  brew "$@"
+  brew list --installed-on-request > "$SBOM_PATH"
+  echo "Brew SBOM updated."
+else
+  brew "$@"
+fi

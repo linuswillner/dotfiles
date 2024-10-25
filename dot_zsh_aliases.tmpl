@@ -1,5 +1,5 @@
 {{- if eq .chezmoi.os "darwin" -}}
-{{-   include "environments/mac/.zsh_aliases" -}}
+{{-   include "environments/darwin/.zsh_aliases" -}}
 {{- else if eq .chezmoi.os "linux" -}}
 {{-   include "environments/linux/.zsh_aliases" -}}
 {{- end -}}

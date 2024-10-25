@@ -1,5 +1,5 @@
 {{- if eq .chezmoi.os "darwin" -}}
-{{-   include "environments/mac/sbom/npm" -}}
+{{-   include "environments/darwin/sbom/npm" -}}
 {{- else if eq .chezmoi.os "linux" -}}
 {{-   include "environments/linux/sbom/npm" -}}
 {{- end -}}
