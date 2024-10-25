@@ -93,6 +93,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+eval "$(mise activate zsh)"
+
 # Aliases
 if [[ -f ~/.zsh_aliases ]]; then
   source ~/.zsh_aliases
@@ -102,9 +104,6 @@ fi
 if [[ -f ~/.zsh_completions ]]; then
   source ~/.zsh_completions
 fi
-
-# thefuck
-eval $(thefuck --alias --enable-experimental-instant-mode)
 
 # zoxide
 eval "$(zoxide init zsh)"
@@ -129,8 +128,5 @@ typeset -ag chpwd_functions
 if (( ! ${chpwd_functions[(I)_direnv_hook]} )); then
   chpwd_functions=(_direnv_hook $chpwd_functions)
 fi
-
-# mise
-eval "$(mise activate zsh)"
 
 fastfetch
