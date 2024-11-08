@@ -13,6 +13,7 @@ dive
 dotnet
 dpkg
 duf
+entr
 eza
 fakeroot
 fastfetch
@@ -50,6 +51,7 @@ nss
 nvm
 parallel
 pinentry-mac
+pipx
 postgresql@14
 powerpipe
 pre-commit
