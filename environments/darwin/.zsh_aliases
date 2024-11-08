@@ -29,3 +29,4 @@ alias naksu2-start-staging='NAKSU2_RELEASE_INFO_URL=https://static.abitti.fi/nak
 alias naksu2-log='tail -f ./naksu2.log'
 alias cdk='./ytl-cdk.sh'
 alias brew='~/brew-sbom.sh'
+alias flushdns='sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
