@@ -1,7 +1,6 @@
 # Modern Unix
 alias ls='eza -lah'
 alias bat='bat --paging=never'
-alias date='gdate'
 alias df='duf'
 alias find='fd'
 alias top='gtop'
