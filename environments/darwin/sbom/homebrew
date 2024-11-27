@@ -1,3 +1,4 @@
+age
 aws-sam-cli
 awscli
 bat
@@ -52,6 +53,7 @@ nvm
 parallel
 pinentry-mac
 pipx
+pkgconf
 postgresql@14
 powerpipe
 pre-commit
@@ -68,7 +70,7 @@ smartmontools
 sshpass
 steampipe
 tfenv
-tldr
+tlrc
 unbound
 up
 vault
