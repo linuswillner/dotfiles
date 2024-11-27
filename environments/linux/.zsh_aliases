@@ -1,0 +1,13 @@
+# Modern Unix
+alias ls='eza -lah'
+alias bat='bat --paging=never'
+alias date='gdate'
+alias df='duf'
+alias find='fd'
+alias top='gtop'
+alias htop='gtop'
+alias ping='gping'
+alias ps='procs'
+alias dig='q'
+alias xargs='gxargs'
+alias cz='chezmoi'
