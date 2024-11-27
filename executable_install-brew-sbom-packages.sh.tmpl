@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2002
 
 set -euo pipefail
 
 SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/homebrew"
+TAP_SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/taps"
 
-brew install "$(cat "$SBOM_PATH")"
+cat "$TAP_SBOM_PATH" | while read -r tap; do
+  # shellcheck disable=SC2086
+  brew tap $tap
+done
+
+# shellcheck disable=SC2046
+brew install $(cat "$SBOM_PATH" | xargs)

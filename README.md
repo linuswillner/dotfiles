@@ -7,7 +7,7 @@ My personal dotfiles, powered by https://chezmoi.io
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install chezmoi
-chezmoi init linuswillner/dotfiles
+chezmoi init linuswillner
 ```
 
 ### macOS
