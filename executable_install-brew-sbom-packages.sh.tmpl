@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/homebrew"
+
+brew install "$(cat "$SBOM_PATH")"
