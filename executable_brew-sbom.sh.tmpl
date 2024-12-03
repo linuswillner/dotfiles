@@ -4,14 +4,24 @@
 set -euo pipefail
 
 SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/homebrew"
+TAP_SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/taps"
 
-if [[ ${1:-} == "install" || ${1:-} == "uninstall" ]]; then
+if [[ "${1:-}" == "install" || "${1:-}" == "uninstall" ]]; then
   brew "$@"
   echo "Installation completed. Updating Brew SBOM..."
-  brew list --installed-on-request > "$SBOM_PATH"
+  brew list --installed-on-request > "$SBOM_PATH.tmp"
+  mv "$SBOM_PATH.tmp" "$SBOM_PATH"
   chezmoi git -- add "environments/{{ .chezmoi.os }}/sbom/homebrew"
   chezmoi git -- commit -m "Automatic Brew SBOM update (OS: {{ .chezmoi.os }})"
   echo "Brew SBOM updated."
+elif [[ "${1:-}" == "tap" || "${1:-}" == "untap" ]]; then
+  brew "$@"
+  echo "Tapping completed. Updating Brew tap SBOM..."
+  brew tap-info --installed --json | jq -r '.[] | select(.user != "Homebrew") | (.name + " " + .remote)' > "$TAP_SBOM_PATH.tmp"
+  mv "$TAP_SBOM_PATH.tmp" "$TAP_SBOM_PATH"
+  chezmoi git -- add "environments/{{ .chezmoi.os }}/sbom/taps"
+  chezmoi git -- commit -m "Automatic Brew tap SBOM update (OS: {{ .chezmoi.os }})"
+  echo "Brew tap SBOM updated."
 else
   brew "$@"
 fi
