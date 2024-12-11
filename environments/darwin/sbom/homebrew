@@ -42,6 +42,7 @@ iproute2mac
 jq
 killport
 make
+miniserve
 mise
 mkcert
 ncdu
