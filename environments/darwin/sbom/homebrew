@@ -41,6 +41,7 @@ imagemagick
 iproute2mac
 jq
 killport
+libpq
 make
 miniserve
 mise
