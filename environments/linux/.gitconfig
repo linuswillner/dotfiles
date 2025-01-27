@@ -1,0 +1,37 @@
+[user]
+  email = linus.willner@reaktor.com
+  name = Linus Willner
+  signingKey = B7C82D0849B0165F1011C874078D7A464021F02B
+[commit]
+  gpgSign = true
+[tag]
+  forceSignAnnotated = true
+[gpg]
+  program = /opt/homebrew/bin/gpg
+  format = openpgp
+[init]
+  defaultBranch = master
+[core]
+  hooksPath = .git/hooks
+[mergetool]
+  keepBackup = true
+[push]
+  autoSetupRemote = true
+[fetch]
+  prune = true
+[gpg "ssh"]
+  program = 
+  allowedSignersFile = 
+[pull]
+  rebase = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[rebase]
+  autosquash = true
+[alias]
+  ignore-local = update-index --assume-unchanged
+  unignore-local = update-index --no-assume-unchanged
+  local-ignore = !code .git/info/exclude
