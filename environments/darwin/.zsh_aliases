@@ -16,6 +16,7 @@ alias gpu='git pull --rebase --autostash'
 alias gpf='git push --force-with-lease'
 alias gsm='git stash > /dev/null && (git switch -q master 2> /dev/null || git switch -q main)'
 alias gsmp='gsm && gpu'
+alias gk='/opt/homebrew/bin/gk'
 # Shortcuts
 alias zshrc='nano ~/.local/share/chezmoi/environments/darwin/.zshrc && cz apply && source ~/.zshrc'
 alias aliases='nano ~/.local/share/chezmoi/environments/darwin/.zsh_aliases && cz apply && source ~/.zshrc'
