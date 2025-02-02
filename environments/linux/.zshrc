@@ -39,7 +39,7 @@ fi
 # direnv
 _direnv_hook() {
   trap -- '' SIGINT;
-  eval "$("/usr/bin/direnv" export zsh)";
+  eval "$("/home/linuxbrew/.linuxbrew/bin/direnv" export zsh)";
   trap - SIGINT;
 }
 typeset -ag precmd_functions;
