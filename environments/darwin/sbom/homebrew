@@ -54,6 +54,7 @@ netcat
 nmap
 nss
 nvm
+openssl@3
 parallel
 pinentry-mac
 pipx
@@ -66,14 +67,17 @@ python-markupsafe
 python@3.10
 python@3.9
 q
+readline
 regclient
 ripgrep
 rpm
 sd
 shellcheck
 smartmontools
+sqlite
 sshpass
 steampipe
+tcl-tk
 tfenv
 tlrc
 unbound
@@ -82,8 +86,10 @@ vault
 watch
 websocat
 wget
+xz
 yarn
 ykman
 ykpers
 yq
+zlib
 zoxide
