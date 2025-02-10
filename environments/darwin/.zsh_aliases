@@ -27,5 +27,6 @@ alias brew='~/brew-sbom.sh'
 alias flushdns='sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 # Current project
 alias obtain-ytl-mfa='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/obtain-ytl-mfa.sh'
-alias ecr-login='/Users/linusw/Documents/Scripts/ecr-login.sh'
-alias cdk='./ytl-cdk.sh'
+alias ecr-login='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/ecr-login.sh'
+alias ytl-cdk='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/ytl-cdk-custom.sh'
+alias ytl-aws-exec='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/ytl-aws-exec.sh'

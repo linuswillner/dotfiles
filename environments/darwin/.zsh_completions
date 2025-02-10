@@ -14,3 +14,8 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/linusw/Library/Caches/heroku/autocomplete/zsh_se
 
 # 1Password
 eval "$(op completion zsh)"; compdef _op op
+
+# Docker Desktop
+FPATH="$HOME/.docker/completions:$FPATH"
+autoload -Uz compinit
+compinit
