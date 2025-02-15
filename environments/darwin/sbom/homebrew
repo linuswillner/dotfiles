@@ -75,6 +75,7 @@ rpm
 sd
 shellcheck
 smartmontools
+speedtest-cli
 sqlite
 sshpass
 steampipe
