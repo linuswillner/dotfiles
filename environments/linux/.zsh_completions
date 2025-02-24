@@ -1,10 +1,13 @@
 # Mise
 eval "$(mise completion zsh)"
 
-# Homebrew zsh completions
+# Homebrew
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
   autoload -Uz compinit
   compinit
 fi
+
+# NPM
+eval "$(npm completion)"

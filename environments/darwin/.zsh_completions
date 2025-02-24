@@ -1,7 +1,7 @@
 # Mise
 eval "$(mise completion zsh)"
 
-# Homebrew zsh completions
+# Homebrew
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -19,3 +19,6 @@ eval "$(op completion zsh)"; compdef _op op
 FPATH="$HOME/.docker/completions:$FPATH"
 autoload -Uz compinit
 compinit
+
+# NPM
+eval "$(npm completion)"
