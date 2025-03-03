@@ -10,6 +10,7 @@ cmake
 coreutils
 ctop
 curlie
+deskflow
 direnv
 dive
 dotnet
