@@ -3,6 +3,7 @@ aws/tap https://github.com/aws/homebrew-tap
 esolitos/ipa https://github.com/esolitos/homebrew-ipa
 hashicorp/tap https://github.com/hashicorp/homebrew-tap
 heroku/brew https://github.com/heroku/homebrew-brew
+joschi/dive https://github.com/joschi/homebrew-dive
 localsend/localsend https://github.com/localsend/homebrew-localsend
 mongodb/brew https://github.com/mongodb/homebrew-brew
 natesales/repo https://github.com/natesales/repo
