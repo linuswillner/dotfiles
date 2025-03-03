@@ -1,5 +1,6 @@
 1password/tap https://github.com/1password/homebrew-tap
 aws/tap https://github.com/aws/homebrew-tap
+deskflow/tap https://github.com/deskflow/homebrew-tap
 esolitos/ipa https://github.com/esolitos/homebrew-ipa
 hashicorp/tap https://github.com/hashicorp/homebrew-tap
 heroku/brew https://github.com/heroku/homebrew-brew
