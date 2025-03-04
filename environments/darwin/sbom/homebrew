@@ -10,7 +10,6 @@ cmake
 coreutils
 ctop
 curlie
-deskflow
 direnv
 dive
 dotnet
@@ -75,6 +74,7 @@ ripgrep
 rpm
 sd
 shellcheck
+siege
 smartmontools
 speedtest-cli
 sqlite
