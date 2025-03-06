@@ -7,7 +7,7 @@
 [tag]
   forceSignAnnotated = true
 [gpg]
-  program = /opt/homebrew/bin/gpg
+  program = /usr/bin/gpg
   format = openpgp
 [init]
   defaultBranch = master
