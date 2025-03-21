@@ -58,6 +58,7 @@ nss
 nvm
 oha
 openssl@3
+otel-desktop-viewer
 parallel
 pinentry-mac
 pipx
