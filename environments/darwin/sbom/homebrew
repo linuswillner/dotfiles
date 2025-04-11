@@ -43,6 +43,7 @@ imagemagick
 iproute2mac
 jq
 killport
+lazydocker
 libpq
 make
 miniserve
