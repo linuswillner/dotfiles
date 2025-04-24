@@ -28,6 +28,7 @@ gh
 git
 git-gui
 git-lfs
+gnu-sed
 gnu-tar
 gnupg
 go
