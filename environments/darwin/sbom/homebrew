@@ -3,6 +3,7 @@ artillery
 aws-sam-cli
 awscli
 bat
+cdrtools
 chezmoi
 choose
 cloc
