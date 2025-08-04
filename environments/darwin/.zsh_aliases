@@ -1,5 +1,5 @@
 # Modern Unix
-alias ls='eza -lah'
+alias ls='eza -lah --total-size'
 alias bat='bat --paging=never'
 alias date='gdate'
 alias df='duf'
