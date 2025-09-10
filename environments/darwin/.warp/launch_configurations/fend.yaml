@@ -1,0 +1,11 @@
+---
+name: Fend
+active_window_index: 0
+windows:
+  - active_tab_index: 0
+    tabs:
+      - layout:
+          cwd: /Users/linusw
+          is_focused: true
+          commands:
+            - exec: fend
