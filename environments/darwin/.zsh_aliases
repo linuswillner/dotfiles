@@ -1,5 +1,6 @@
 # Modern Unix
-alias ls='eza -lah --total-size'
+alias ls='eza -lah'
+alias lss='ls --total-size --ignore-glob node_modules'
 alias bat='bat --paging=never'
 alias date='gdate'
 alias df='duf'
