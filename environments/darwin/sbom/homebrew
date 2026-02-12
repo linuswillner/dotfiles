@@ -48,6 +48,7 @@ imagemagick
 iproute2mac
 jq
 just
+just-lsp
 killport
 lazydocker
 libpq
