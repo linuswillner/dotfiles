@@ -10,6 +10,7 @@ choose
 cloc
 cmake
 coreutils
+csvkit
 ctop
 curlie
 direnv
