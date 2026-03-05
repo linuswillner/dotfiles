@@ -52,6 +52,7 @@ just
 just-lsp
 killport
 lazydocker
+ldid
 libpq
 make
 miniserve
