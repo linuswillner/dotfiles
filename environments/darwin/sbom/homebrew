@@ -58,6 +58,7 @@ make
 miniserve
 mise
 mkcert
+mole
 mongodb-database-tools
 ncdu
 neofetch
