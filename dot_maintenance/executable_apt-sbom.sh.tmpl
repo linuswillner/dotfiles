@@ -13,8 +13,10 @@ if [[ "$COMMAND" == "install" || "$COMMAND" == "remove" ]]; then
   FLAGS=()
 
   for arg in "${@:2}"; do
-    if [[ "$arg" == "--" ]]; then
+    if [[ "$arg" =~ ^-- ]]; then
       FLAGS+=("$arg")
+    elif [[ "$arg" =~ ^[./~] ]]; then
+      echo "Warning: Package '$arg' is being installed from local deb, skipping it in the SBOM"
     else
       PACKAGES+=("$arg")
     fi
