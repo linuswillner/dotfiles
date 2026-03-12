@@ -6,4 +6,6 @@ docker-ce-cli
 docker-compose-plugin
 firefox-devedition
 git-lfs
+libarchive-tools
 virtualbox
+xorriso
