@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Check that user is root
+if [[ $EUID -ne 0 ]]; then
+  echo "Error: This script must be run as root." >&2
+  exit 1
+fi
+
+SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/apt"
+
+apt update
+
+# shellcheck disable=SC2046
+apt install --yes $(cat "$SBOM_PATH" | xargs)

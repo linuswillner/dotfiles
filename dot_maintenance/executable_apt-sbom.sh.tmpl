@@ -1,0 +1,54 @@
+#/usr/bin/env bash
+# APT wrapper that keeps installed packages in the repository's SBOM
+
+set -euo pipefail
+
+SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/apt"
+
+# Check that user is root
+if [[ $EUID -ne 0 ]]; then
+  echo "Error: This script must be run as root." >&2
+  exit 1
+fi
+
+COMMAND="${1:-}"
+
+if [[ "$COMMAND" == "install" || "$COMMAND" == "remove" ]]; then
+  # Retrieve list of packages to install/remove from command parameters, also collect the flags
+  PACKAGES=()
+  FLAGS=()
+
+  for arg in "${@:2}"; do
+    if [[ "$arg" == "--" ]]; then
+      FLAGS+=("$arg")
+    else
+      PACKAGES+=("$arg")
+    fi
+  done
+
+  apt "apt $COMMAND ${FLAGS[*]} ${PACKAGES[*]}"
+  echo "Installation completed. Updating APT SBOM..."
+
+  cp "$SBOM_PATH" "$SBOM_PATH.tmp"
+
+  if [[ "$COMMAND" == "install" ]]; then
+    # Add packages to the SBOM
+    for package in "${PACKAGES[@]}"; do
+      echo "$package" >> "$SBOM_PATH.tmp"
+    done
+  elif [[ "$COMMAND" == "remove" ]]; then
+    # Remove packages from the SBOM
+    for package in "${PACKAGES[@]}"; do
+      sed -i "/^$package\$/d" "$SBOM_PATH.tmp"
+    done
+  fi
+
+  mv "$SBOM_PATH.tmp" "$SBOM_PATH"
+  sort -u "$SBOM_PATH" -o "$SBOM_PATH"
+
+  chezmoi git -- add "environments/{{ .chezmoi.os }}/sbom/apt"
+  chezmoi git -- commit -m "Automatic APT SBOM update (OS: {{ .chezmoi.os }})"
+  echo "APT SBOM updated."
+else
+  apt "$@"
+fi
