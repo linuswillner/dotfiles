@@ -27,3 +27,5 @@ alias bg='brew upgrade'
 alias local-gitignore='git local-ignore'
 alias brew='~/.maintenance/brew-sbom.sh'
 alias apt='~/.maintenance/apt-sbom.sh'
+# Current project
+alias mkytllinux='./make-ytl-linux-vm.sh'
