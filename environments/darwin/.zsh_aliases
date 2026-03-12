@@ -28,7 +28,7 @@ alias aliases='nano ~/.local/share/chezmoi/environments/darwin/.zsh_aliases && c
 alias bu='brew update --verbose && brew outdated'
 alias bg='brew upgrade'
 alias local-gitignore='git local-ignore'
-alias brew='~/brew-sbom.sh'
+alias brew='~/.maintenance/brew-sbom.sh'
 alias flushdns='sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 # Current project
 alias obtain-ytl-mfa='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/obtain-ytl-mfa.sh'

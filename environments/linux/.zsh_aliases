@@ -25,5 +25,5 @@ alias aliases='nano ~/.local/share/chezmoi/environments/linux/.zsh_aliases && cz
 alias bu='brew update --verbose && brew outdated'
 alias bg='brew upgrade'
 alias local-gitignore='git local-ignore'
-alias brew='~/brew-sbom.sh'
+alias brew='~/.maintenance/brew-sbom.sh'
 alias apt='sudo apt'

@@ -14,18 +14,19 @@ chezmoi apply
 ### macOS
 
 ```bash
-~/install-omz.sh
+~/.os-customizer/install-omz.sh
 ```
 
 ### Linux
 
 ```bash
-~/install-zsh.sh
-~/install-omz.sh
+~/.os-customizer/install-zsh.sh
+~/.os-customizer/install-omz.sh
+~/.os-customizer/install-danklinux.sh
 ```
 
 ### Universal
 
 ```bash
-~/install-brew-sbom.sh
+~/.maintenance/apply-brew-sbom.sh
 ```
