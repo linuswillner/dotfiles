@@ -11,22 +11,18 @@ chezmoi init linuswillner
 chezmoi apply
 ```
 
-### macOS
+### 🍎 macOS
 
 ```bash
 ~/.os-customizer/install-omz.sh
+~/.maintenance/apply-brew-sbom.sh
 ```
 
-### Linux
+### 🐧 Linux
 
 ```bash
 ~/.os-customizer/install-zsh.sh
 ~/.os-customizer/install-omz.sh
-~/.os-customizer/install-danklinux.sh
-```
-
-### Universal
-
-```bash
 ~/.maintenance/apply-brew-sbom.sh
+~/.os-customizer/install-danklinux.sh
 ```
