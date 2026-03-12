@@ -3,7 +3,7 @@
 set -euo pipefail
 
 {{ if eq .chezmoi.os "linux" -}}
-curl -fsSL https://install.danklinux.com | sh
+curl -fsSL https://install.danklinux.com | bash
 {{- else -}}
 echo "This script can only be run on Linux."
 {{- end }}
