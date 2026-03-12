@@ -1,15 +1,9 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 # APT wrapper that keeps installed packages in the repository's SBOM
 
 set -euo pipefail
 
 SBOM_PATH="$HOME/.local/share/chezmoi/environments/{{ .chezmoi.os }}/sbom/apt"
-
-# Check that user is root
-if [[ $EUID -ne 0 ]]; then
-  echo "Error: This script must be run as root." >&2
-  exit 1
-fi
 
 COMMAND="${1:-}"
 
@@ -26,7 +20,7 @@ if [[ "$COMMAND" == "install" || "$COMMAND" == "remove" ]]; then
     fi
   done
 
-  apt "apt $COMMAND ${FLAGS[*]} ${PACKAGES[*]}"
+  sudo apt "$COMMAND" "${FLAGS[@]}" "${PACKAGES[@]}"
   echo "Installation completed. Updating APT SBOM..."
 
   cp "$SBOM_PATH" "$SBOM_PATH.tmp"
