@@ -10,7 +10,6 @@ choose
 cloc
 cmake
 coreutils
-csvkit
 csvlens
 ctop
 curlie
