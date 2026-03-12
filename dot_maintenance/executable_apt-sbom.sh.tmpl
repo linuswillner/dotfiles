@@ -9,7 +9,8 @@ COMMAND="${1:-}"
 
 if [[ "$COMMAND" == "install" || "$COMMAND" == "remove" ]]; then
   # Retrieve list of packages to install/remove from command parameters, also collect the flags
-  PACKAGES=()
+  PACKAGES_TO_INSTALL=()
+  PACKAGES_TO_SBOM=()
   FLAGS=()
 
   for arg in "${@:2}"; do
@@ -17,24 +18,26 @@ if [[ "$COMMAND" == "install" || "$COMMAND" == "remove" ]]; then
       FLAGS+=("$arg")
     elif [[ "$arg" =~ ^[./~] ]]; then
       echo "Warning: Package '$arg' is being installed from local deb, skipping it in the SBOM"
+      PACKAGES_TO_INSTALL+=("$arg")
     else
-      PACKAGES+=("$arg")
+      PACKAGES_TO_INSTALL+=("$arg")
+      PACKAGES_TO_SBOM+=("$arg")
     fi
   done
 
-  sudo apt "$COMMAND" "${FLAGS[@]}" "${PACKAGES[@]}"
+  sudo apt "$COMMAND" "${FLAGS[@]}" "${PACKAGES_TO_INSTALL[@]}"
   echo "Installation completed. Updating APT SBOM..."
 
   cp "$SBOM_PATH" "$SBOM_PATH.tmp"
 
   if [[ "$COMMAND" == "install" ]]; then
     # Add packages to the SBOM
-    for package in "${PACKAGES[@]}"; do
+    for package in "${PACKAGES_TO_SBOM[@]}"; do
       echo "$package" >> "$SBOM_PATH.tmp"
     done
   elif [[ "$COMMAND" == "remove" ]]; then
     # Remove packages from the SBOM
-    for package in "${PACKAGES[@]}"; do
+    for package in "${PACKAGES_TO_SBOM[@]}"; do
       sed -i "/^$package\$/d" "$SBOM_PATH.tmp"
     done
   fi
