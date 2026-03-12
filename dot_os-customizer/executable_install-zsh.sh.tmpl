@@ -3,7 +3,7 @@
 set -euo pipefail
 
 {{ if eq .chezmoi.os "linux" -}}
-apt install zsh
+sudo apt install zsh
 chsh -s $(which zsh)
 echo "ZSH installation finished, logging out in 5 seconds..."
 sleep 5
