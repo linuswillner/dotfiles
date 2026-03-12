@@ -11,6 +11,7 @@ cloc
 cmake
 coreutils
 csvkit
+csvlens
 ctop
 curlie
 direnv
