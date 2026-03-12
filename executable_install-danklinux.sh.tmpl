@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+{{ if eq .chezmoi.os "linux" -}}
+curl -fsSL https://install.danklinux.com | sh
+{{- else -}}
+echo "This script can only be run on Linux."
+{{- end }}

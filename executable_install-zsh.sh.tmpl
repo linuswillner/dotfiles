@@ -7,7 +7,7 @@ apt install zsh
 chsh -s $(which zsh)
 echo "ZSH installation finished, logging out in 5 seconds..."
 sleep 5
-logout
+loginctl kill-session 1
 {{- else -}}
 echo "Running on macOS, ZSH installation not required."
 {{- end }}
