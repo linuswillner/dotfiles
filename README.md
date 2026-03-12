@@ -24,5 +24,6 @@ chezmoi apply
 ~/.os-customizer/install-zsh.sh
 ~/.os-customizer/install-omz.sh
 ~/.maintenance/apply-brew-sbom.sh
+~/.os-customizer/install-firefox.sh
 ~/.os-customizer/install-danklinux.sh
 ```
