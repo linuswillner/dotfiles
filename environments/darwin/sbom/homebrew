@@ -54,6 +54,8 @@ killport
 lazydocker
 ldid
 libpq
+lima
+lima-additional-guestagents
 make
 miniserve
 mise
