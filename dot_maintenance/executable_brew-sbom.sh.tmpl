@@ -10,6 +10,8 @@ if [[ "${1:-}" == "install" || "${1:-}" == "uninstall" ]]; then
   brew "$@"
   echo "Installation completed. Updating Brew SBOM..."
   brew list --installed-on-request > "$SBOM_PATH.tmp"
+  brew list --casks >> "$SBOM_PATH.tmp"
+  sort --output "$SBOM_PATH.tmp" "$SBOM_PATH.tmp"
   mv "$SBOM_PATH.tmp" "$SBOM_PATH"
   chezmoi git -- add "environments/{{ .chezmoi.os }}/sbom/homebrew"
   chezmoi git -- commit -m "Automatic Brew SBOM update (OS: {{ .chezmoi.os }})"
