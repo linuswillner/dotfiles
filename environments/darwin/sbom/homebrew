@@ -96,7 +96,6 @@ procs
 python-markupsafe
 python@3.10
 python@3.9
-q
 qdirstat
 qemu
 readline
@@ -123,6 +122,7 @@ wakeonlan
 watch
 websocat
 wget
+whatcable
 xorriso
 xq
 xz
