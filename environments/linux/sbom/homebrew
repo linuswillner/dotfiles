@@ -9,8 +9,9 @@ gcc
 gh
 gping
 gtop
-jq
 just
+lima
+lima-additional-guestagents
 make
 mise
 mkcert
