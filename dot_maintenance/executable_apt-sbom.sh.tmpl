@@ -49,5 +49,5 @@ if [[ "$COMMAND" == "install" || "$COMMAND" == "remove" ]]; then
   chezmoi git -- commit -m "Automatic APT SBOM update (OS: {{ .chezmoi.os }})"
   echo "APT SBOM updated."
 else
-  apt "$@"
+  sudo apt "$@"
 fi
