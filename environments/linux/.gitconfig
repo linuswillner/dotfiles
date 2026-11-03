@@ -20,8 +20,8 @@
 [fetch]
   prune = true
 [gpg "ssh"]
-  program = 
-  allowedSignersFile = 
+  program =
+  allowedSignersFile =
 [pull]
   rebase = true
 [filter "lfs"]
@@ -34,4 +34,4 @@
 [alias]
   ignore-local = update-index --assume-unchanged
   unignore-local = update-index --no-assume-unchanged
-  local-ignore = !code .git/info/exclude
+  local-ignore = !zed .git/info/exclude
