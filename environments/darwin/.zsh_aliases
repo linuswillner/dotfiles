@@ -22,6 +22,8 @@ alias gpr='git removed-branches --prune --force'
 alias gsc='git stash clear && echo "All stashes cleared"'
 alias gcl='gpr && gsc'
 alias gk='/opt/homebrew/bin/gk'
+# Muscle memory migrations
+alias cloc='tokei'
 # Shortcuts
 alias zshrc='nano ~/.local/share/chezmoi/environments/darwin/.zshrc && cz apply && source ~/.zshrc'
 alias aliases='nano ~/.local/share/chezmoi/environments/darwin/.zsh_aliases && cz apply && source ~/.zshrc'
@@ -35,3 +37,4 @@ alias obtain-ytl-mfa='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/obt
 alias ecr-login='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/ecr-login.sh'
 alias ytl-cdk='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/ytl-cdk-custom.sh'
 alias ytl-aws-exec='/Users/linusw/Documents/Projects/Reaktor/YTL/cdk-infra/ytl-aws-exec.sh'
+alias gpa='./do_in_all.sh git pull'
