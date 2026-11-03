@@ -1,0 +1,91 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // Basic settings
+  "proxy": "",
+  "base_keymap": "VSCode",
+  "theme": "VSCode Dark Modern",
+  "icon_theme": "Material Icon Theme",
+  // Fonts
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0,
+  "semantic_tokens": "combined",
+  "terminal": {
+    "font_family": "Roboto Mono for Powerline",
+    "font_fallbacks": [
+      "Consolas",
+      "Zed Plex Mono"
+    ]
+  },
+  "buffer_font_family": "Consolas",
+  "buffer_font_fallbacks": [
+    "Zed Plex Mono",
+  ],
+  // Visual
+  "tab_size": 2,
+  "project_panel": {
+    "folder_indicator": "both",
+    "dock": "left",
+    "git_status": false
+  },
+  "outline_panel": {
+    "git_status": false
+  },
+  "status_bar": {
+    "experimental.show": true
+  },
+  "tabs": {
+    "git_status": false
+  },
+  "indent_guides": {
+    "enabled": false
+  },
+  "minimap": {
+    "show": "never"
+  },
+  // Editing
+  "linked_edits": true,
+  "ensure_final_newline_on_save": true,
+  "edit_predictions": {
+    "allow_data_collection": "no",
+    "provider": "zed"
+  },
+  // Disable unwanted features
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "agent": {
+    "enabled": false,
+    "button": false
+  },
+  "show_signature_help_after_edits": false,
+  "auto_signature_help": false,
+  // Language settings
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.DS_Store",
+    "**/node_modules",
+    "**/flow-typed",
+    "**/bower-components",
+    "**/.classpath",
+    "**/.project",
+    "**/.settings",
+    "**/.factorypath",
+    "**/__pycache__",
+    "**/.venv"
+  ],
+  "file_types": {
+    "json": [
+      ".stylelintrc"
+    ]
+  },
+}
