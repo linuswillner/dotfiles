@@ -8,6 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Basic settings
+  "cli_default_open_behavior": "new_window",
   "proxy": "",
   "base_keymap": "VSCode",
   "theme": "VSCode Dark Modern",
