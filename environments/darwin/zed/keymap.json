@@ -63,5 +63,22 @@
     "bindings": {
       "cmd-shift-x": "zed::Extensions"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-enter": "editor::ShowCompletions"
+    }
+  },
+  {
+    "unbind": {
+      "cmd-enter": "menu::SecondaryConfirm"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-space": "editor::ShowCompletions"
+    }
   }
 ]
