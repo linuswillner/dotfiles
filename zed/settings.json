@@ -8,6 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Basic settings
+  "git": {
+    "show_stage_restore_buttons": false,
+    "enable_status": true
+  },
   "cli_default_open_behavior": "new_window",
   "proxy": "",
   "base_keymap": "VSCode",
