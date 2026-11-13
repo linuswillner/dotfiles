@@ -8,6 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // Basic settings
+  "search": {
+    "include_ignored": true
+  },
   "git": {
     "show_stage_restore_buttons": false,
     "enable_status": true
@@ -86,7 +89,9 @@
     "**/.settings",
     "**/.factorypath",
     "**/__pycache__",
-    "**/.venv"
+    "**/.venv",
+    "**/dist",
+    "**/cdk.out"
   ],
   "file_types": {
     "json": [
