@@ -12,7 +12,6 @@ bruno
 cdrtools
 chezmoi
 choose
-cloc
 cmake
 coreutils
 csvlens
@@ -67,6 +66,7 @@ lima
 lima-additional-guestagents
 localsend
 make
+miller
 miniserve
 mise
 mkcert
@@ -96,6 +96,7 @@ procs
 python-markupsafe
 python@3.10
 python@3.9
+q
 qdirstat
 qemu
 readline
@@ -115,6 +116,7 @@ stillcolor
 tcl-tk
 tfenv
 tlrc
+tokei
 unbound
 up
 utm
