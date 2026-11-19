@@ -92,7 +92,8 @@
     "**/__pycache__",
     "**/.venv",
     "**/dist",
-    "**/cdk.out"
+    "**/cdk.out",
+    "*.log"
   ],
   "file_types": {
     "json": [
