@@ -7,6 +7,7 @@ aws-vault
 aws-vault-binary
 awscli
 bat
+bettercmdtab
 bleunlock
 bruno
 cdrtools
@@ -114,7 +115,6 @@ sqlite
 sshpass
 steampipe
 stillcolor
-switch
 tcl-tk
 tfenv
 tlrc
